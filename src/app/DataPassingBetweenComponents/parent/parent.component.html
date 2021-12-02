@@ -1,0 +1,38 @@
+<p>
+  parent works!
+</p>
+<br>
+Parent Component - Parent Message is:: {{parentMessage}} <br>
+
+Parent Component - Message from Child is::: {{message}}
+
+
+<app-child [messageFromParent]="parentMessage"></app-child>
+
+<app-child (messageEvent)="receiveMessageFromChild($event)"></app-child>
+
+<br> <br> <br>
+<table border="1px">
+  <tr>
+    <td>
+      <strong>
+        Parent Component 
+      </strong>
+      <br>
+      <span style="color: Blue">
+        <b> {{msgSub}}</b>
+      </span>
+    </td>
+    <td>
+     
+
+    </td>
+    <td>
+      <strong>
+        Sibling Component <br>
+        <app-sibling></app-sibling>
+
+      </strong>
+    </td>
+  </tr>
+</table>

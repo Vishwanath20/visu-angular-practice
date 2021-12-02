@@ -1,0 +1,21 @@
+<form [formGroup]="reactiveFromGroup" (ngSubmit)="formSubmit()">
+
+  <input formControlName='age' type="number" class="form-control" placeholder="Enter Age" />
+  <div class="alert  alert-danger"
+    *ngIf="reactiveFromGroup.get('age').dirty && reactiveFromGroup.get('age').errors && reactiveFromGroup.get('age').errors.ageRange ">
+    Age should be in between 18 to 45 years
+  </div>
+
+  <label>Email</label>
+  <input type="email"
+           class="form-control"
+           formControlName="email"
+           required>
+  <div class="form-control-feedback"
+    *ngIf="reactiveFromGroup.get('email').errors && (reactiveFromGroup.get('email').dirty || reactiveFromGroup.get('email').touched)">
+    <p *ngIf="reactiveFromGroup.get('email').errors.emailDomain">Email must be on the visu.com domain</p>
+  </div>
+
+  <button type="submit">submit</button>
+</form>
+<br>

@@ -1,0 +1,22 @@
+<p>
+  <button (click)="openPDF()">Download as PDF</button>
+</p>
+
+<!-- <div>
+  Student ID is:: {{iddd}} and Total Marks::: {{marksss}}
+</div> -->
+
+<table border="1">
+  <tr>
+    <td>
+      student iD
+    </td>
+    <td>
+      ID
+    </td>
+  </tr>
+  <tr *ngFor="let data of Students">
+    <td>{{data.userId}}</td>
+    <td>{{data.id}}</td>
+  </tr>
+</table>

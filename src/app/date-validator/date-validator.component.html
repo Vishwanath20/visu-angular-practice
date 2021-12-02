@@ -1,0 +1,10 @@
+<p>
+  Custom Validator for Date less then today's date.
+</p>
+
+<form [formGroup]="dateValidatorFromGroup" (ngSubmit)="dateSubmit()">
+  Date
+  <input class="form-control" formControlName="date_end" type="date" max="{{this.date}}" >
+  <br><br>
+  <button type="submit">submit</button>
+</form>

@@ -1,0 +1,73 @@
+search: <input type="text" [(ngModel)] = "searchData" (change) = "searchDatafun(searchContent.value)" #searchContent>
+{{searchData}}
+
+<div *ngIf="mainTable">
+  {{showtable}}
+  <table border="1px">
+    <tr>
+      <td>
+        id
+      </td>
+      <td>
+        name
+      </td>
+      <td>
+        marks
+      </td>
+      <td>
+        grade
+      </td>
+    </tr>
+    <tr *ngFor="let data of arr">
+      <td>
+        {{data.id}}
+      </td>
+      <td>
+        {{data.name}}
+      </td>
+      <td>
+        {{data.marks}}
+      </td>
+      <td>
+        {{data.grade}}
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div *ngIf="showtable" border="1px">
+  <table>
+    <tr>
+      <td>
+        idd
+      </td>
+      <td>
+        name
+      </td>
+      <td>
+        marks
+      </td>
+      <td>
+        grade
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{filterId}}
+      </td>
+
+      <td>
+        {{filtername}}
+      </td>
+
+      <td>
+        {{filtermarks}}
+      </td>
+
+      <td>
+        {{filtergrade}}
+      </td>
+
+    </tr>
+  </table>
+</div>

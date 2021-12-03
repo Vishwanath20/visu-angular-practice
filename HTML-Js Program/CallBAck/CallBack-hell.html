@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+      const btn = document.querySelector("button");
+      const result = document.getElementById("k");
+
+      const firstCallBack = callBack => {
+         // result.textContent = "First Call Back";
+         console.log("First Call Bacck");
+          setTimeout(() => {
+              callBack(true);
+          }, 5000);
+      };
+
+      const secondCallBack = callBack => {
+            //result.textContent = "Now Second callback is loading";
+            console.log("second Call Bacck");
+            setTimeout(() => {
+                    callBack(true);
+             }, 2000);
+        };
+
+    // 
+
+    firstCallBack ((callBack) => {
+        if(callBack){
+            secondCallBack((cb) => {
+                if(cb){
+                    console.log("Got Apple");
+                }
+            });
+        }
+    });
+
+  </script>
+</head>
+<body>
+    <button id="button" tyep = "button"> click here </button>
+    <p id="k"></p>
+</body>
+</html>

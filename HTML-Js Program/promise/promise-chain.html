@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        const firstPrmose = callBack =>{
+            document.write("First callBAck");
+            return new Promise((resolve, reject) =>{
+                setTimeout(resolve(true),5000);
+            });
+        };
+
+        const secondPromise = callBack => {
+            document.write("Second CallBAck");
+            return new Promise((resolve, reject) =>{
+                setTimeout(resolve(true), 5000);
+            });
+        };
+
+        firstPrmose()
+            .then(isTrue =>{
+                if(isTrue){
+                    return secondPromise()
+                        .then( () => document.write("Got Apple"))
+                }
+            })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

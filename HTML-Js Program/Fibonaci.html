@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function findFibonaci(){
+            var v1 = 0;
+            var v2 = 1;
+            var v3;
+
+            document.write(v1);
+            document.write("\n"+v2);
+
+            for( let i =2; i<10; i++){
+                
+                v3 = v1 + v2;
+                v1 = v2;
+                v2 = v3;
+
+                document.write("\n"+v3);
+            }
+        }
+        findFibonaci();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

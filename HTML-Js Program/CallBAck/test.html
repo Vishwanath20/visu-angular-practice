@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script>
+//             const getApple = () => {
+//   setTimeout(() => {
+//     return { "name": "Macintosh" }
+//   }, 2000);
+// };
+
+// const myApple = getApple(); 
+// console.log(myApple.name);
+
+//************** To 2nd
+const getApple = (b) =>{
+    setTimeout( () =>{
+        b({name: "Vishu"});
+    }, 5000);
+    console.log("ttttttt");
+};
+
+getApple((apple) => {
+    console.log(apple.name);
+})
+        </script>
+    </head>
+</html>

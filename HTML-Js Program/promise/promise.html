@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script>
+            var promise = new Promise(function(resolve, reject){
+                const x = "Vishu";
+                const y = "pater";
+                if(x == y){
+                    resolve();
+                }
+                else{
+                    reject();
+                }
+            });
+
+            promise
+                .then(function(){
+                    console.log("Both are equal");
+                })
+                .catch(function(){
+                    console.log("Not Equal");
+                })
+        </script>
+    </head>
+</html>

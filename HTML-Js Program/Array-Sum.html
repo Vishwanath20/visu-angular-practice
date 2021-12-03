@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        var arr = [2, 4, 5, 6, 7, 9, 11, 15];
+        // var res = arr.filter((ele) => {
+        //     ( ele % 2 == 0)).reduce((sum, ele1) => {
+        //         sum = sum + ele1;
+        // });
+
+        var res1 = arr => arr.filter( ele => !(ele %2)).reduce((a,b) => a+b);
+        console.log(`Sum of array is ${res1(arr)}`); 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

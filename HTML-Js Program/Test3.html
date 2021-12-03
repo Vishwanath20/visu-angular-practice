@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function A(id){
+            console.log(`in A (${id})`);
+        }
+
+        class B extends A{
+            constructor(id){
+                super(id);
+                console.log(`in B(${id})`);
+            }
+        }
+
+        var b= new B(2);
+    </script>
+</head>
+<body>
+    function A(id){
+        console.log('in A ($ {id})');
+    }
+
+    class B extends A{
+        constructor(id){
+            super(id);
+            console.log('in B(${id})');
+        }
+    }
+
+    var b= new B(2);
+</body>
+</html>
